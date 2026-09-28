@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PizzaCraft — Support</title>
+<meta name="description" content="Help with PizzaCraft: frequently asked questions and a contact form.">
+<meta name="theme-color" content="#F6EEE2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<div class="blobs" aria-hidden="true"><div class="blob a"></div><div class="blob b"></div></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/apple-touch-icon.png" alt=""><span>PizzaCraft</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <!-- Official Apple badge, served by Apple. Apple's guidelines: don't alter, animate or rotate it. -->
+    <a class="store-badge" href="https://apps.apple.com/app/pizzacraft-dough-calculator/id6786406775" aria-label="Download PizzaCraft on the App Store">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us">
+        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="114" height="38">
+      </picture>
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <div class="emoji" aria-hidden="true">🧑‍🍳</div>
+    <h1>How can we help?</h1>
+    <p>Answers to the most common questions, and a way to reach me if you're stuck, found a bug, or have an idea.</p>
+  </section>
+
+  <h2 class="section-title reveal">Frequently asked questions</h2>
+
+  <details class="reveal">
+    <summary>Where is my data stored?</summary>
+    <div class="answer">
+      <p>On your device. If iCloud is turned on for PizzaCraft, your recipes and bake journal (including photos) are also kept in your own private iCloud account, so they appear on your other iPhone and iPad. Timers and bake plans stay on the device where you made them.</p>
+      <p>Nothing is ever sent to me. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary>My recipes don't show up on my other device.</summary>
+    <div class="answer">
+      <p>Check that both devices are signed in to the same Apple Account and that iCloud is on for PizzaCraft: <strong>Settings › [your name] › iCloud</strong>. Open PizzaCraft on both and give it a minute. The app's own Settings (the gear on the Calculator) shows whether iCloud is available.</p>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary>Where are kitchen temperature, manual yeast and poolish?</summary>
+    <div class="answer">
+      <p>They're advanced options. Tap the gear at the top of the Calculator and turn on <strong>Advanced options</strong>. Nothing you've set is lost while they're hidden.</p>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary>How do bake plans work?</summary>
+    <div class="answer">
+      <p>On the Calculator, tap <strong>Plan for a Time</strong> and pick when you want to eat. PizzaCraft works out when to mix, ball, refrigerate, take the dough out and preheat, and sends a notification at each step. After pizza time you can log the bake in your journal with one tap.</p>
+      <p>No reminders? Allow notifications for PizzaCraft in <strong>Settings › Notifications</strong>.</p>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary>The Home Screen widget isn't showing my timer.</summary>
+    <div class="answer">
+      <p>Add the PizzaCraft widget from the widget gallery (touch and hold the Home Screen, tap <strong>Edit › Add Widget</strong>, then search for PizzaCraft), and make sure a fermentation timer is running in the app.</p>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary>How do I switch between grams and ounces?</summary>
+    <div class="answer">
+      <p>Tap the <strong>g / oz</strong> button at the top of the Calculator, or choose your units in Settings. It applies everywhere weights are shown.</p>
+    </div>
+  </details>
+
+  <details class="reveal">
+    <summary>Can I save my own recipe?</summary>
+    <div class="answer">
+      <p>Yes. Tap <strong>+</strong> on the Recipes tab to write one from scratch, or dial in a formula on the Calculator and tap <strong>Save as Recipe</strong>.</p>
+    </div>
+  </details>
+
+  <h2 class="section-title reveal">Still stuck? Say hello 👋</h2>
+
+  <div class="card reveal">
+    <h2><span class="badge" aria-hidden="true">💬</span>Get in touch</h2>
+    <p>Bug, question or idea for a new feature — I read every message. For bugs, your iOS version and what you were doing help a lot.</p>
+    <!-- Messages go through Formspree, which emails them on; "email" becomes the reply-to address. -->
+    <form id="contact" class="form" action="https://formspree.io/f/xzezydbq" method="POST">
+      <input type="hidden" name="_subject" value="PizzaCraft support">
+      <!-- Spam trap: hidden from people, filled in by bots; Formspree drops those submissions. -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap">
+      <div class="row">
+        <label><span class="lt">Name <em>(optional)</em></span><input name="name" autocomplete="name"></label>
+        <label><span class="lt">Your email <em>(so I can reply)</em></span><input name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <div class="row">
+        <label>Topic
+          <select name="topic">
+            <option>Question</option>
+            <option>Bug report</option>
+            <option>Feature idea</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label><span class="lt">iOS version <em>(optional)</em></span><input name="ios" placeholder="e.g. iOS 26.1"></label>
+      </div>
+      <label>Message<textarea name="message" required></textarea></label>
+      <button class="button" type="submit">Send message 🍕</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <p class="form-note">Your email is only used to reply to you. See the <a href="privacy.html">Privacy Policy</a>.</p>
+    </form>
+  </div>
+</main>
+
+<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,70 L0,70 Z"/>
+</svg>
+<footer>
+  <div class="wrap">
+    <p class="again">Buon appetito 🍕</p>
+    <a class="store-badge" href="https://apps.apple.com/app/pizzacraft-dough-calculator/id6786406775" aria-label="Download PizzaCraft on the App Store">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us">
+        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="144" height="48">
+      </picture>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+    <div>© 2026 Oblivium</div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
