@@ -582,7 +582,8 @@
         ? document.elementsFromPoint(e.clientX, e.clientY).find(el => el.classList && el.classList.contains('phone'))
         : null;
       const i = tapped ? phones.indexOf(tapped) : -1;
-      go(i >= 0 ? Math.round(pos) + Math.round(wrapDelta(i - pos)) : Math.round(target), true);
+      // A cancelled touch is the page scrolling, not the visitor steering: don't pause auto-play.
+      go(i >= 0 ? Math.round(pos) + Math.round(wrapDelta(i - pos)) : Math.round(target), e.type === 'pointerup');
     };
     stage.addEventListener('pointerup', release);
     stage.addEventListener('pointercancel', release);
